@@ -4,46 +4,55 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Survey;
 
 class SurveyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $surveys = Survey::all();
+        return $surveys;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $survey = new Survey();
+        $survey->dni = $request->dni;
+        $survey->product = $request->product;
+        $survey->by_product = $request->by_product;
+        $survey->maintenance = $request->maintenance;
+        $survey->state = $request->state;
+        $survey->create_survey = $request->create_survey;
+        $survey->last_change = $request->last_change;
+
+        $survey->save();
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
-        //
+        $survey = Survey::find($id);
+        return $survey;
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        $survey = Survey::find($id);
+        $survey->dni = $request->dni;
+        $survey->product = $request->product;
+        $survey->by_product = $request->by_product;
+        $survey->maintenance = $request->maintenance;
+        $survey->state = $request->state;
+        $survey->create_survey = $survey->create_survey;
+        $survey->last_change = $request->last_change;
+
+        $survey->save();
+        return $survey;
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        $survey = Survey::destroy($id);
+        return $survey;
     }
 }
