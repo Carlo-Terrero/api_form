@@ -13,6 +13,7 @@
 - Una vez terminada la instalación utilice en la terminal -> php artisan server <- para levantar la app.
 - Duplique el archivo .env.example y nombrelo como .env
 - Allí tiene que hacer las configuraciones necesarias para que se conecte a la bbdd deseada
+- Si no tiene bbdd para este proyecto debe crear una con el nombre que haya puesto en el .env y luego en la terminal poner -> php artisan migrate <- para migrar e implementar las tablas ya configuradas en el proyecto a la bbdd
 
 ## Login
 
