@@ -20,7 +20,9 @@ class SurveyController extends Controller
         $survey->dni = $request->dni;
         $survey->product = $request->product;
         $survey->by_product = $request->by_product;
+        $survey->by_product_two = $request->by_product_two;
         $survey->maintenance = $request->maintenance;
+        $survey->maintenance_two = $request->maintenance_two;
         $survey->state = $request->state;
         $survey->create_survey = $request->create_survey;
         $survey->last_change = $request->last_change;
@@ -33,14 +35,16 @@ class SurveyController extends Controller
         $survey = Survey::find($id);
         return $survey;
     }
-
+    
     public function update(Request $request, string $id)
     {
         $survey = Survey::find($id);
         $survey->dni = $request->dni;
         $survey->product = $request->product;
         $survey->by_product = $request->by_product;
+        $survey->by_product_two = $request->by_product_two;
         $survey->maintenance = $request->maintenance;
+        $survey->maintenance_two = $request->maintenance_two;
         $survey->state = $request->state;
         $survey->create_survey = $survey->create_survey;
         $survey->last_change = $request->last_change;

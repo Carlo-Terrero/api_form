@@ -9,5 +9,5 @@ class Survey extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['dni', 'product', 'by_product', 'maintenance', 'state', 'create_survey', 'last_change'];
+    protected $fillable = ['dni', 'product', 'by_product', 'by_product_two', 'maintenance', 'maintenance_two', 'state', 'create_survey', 'last_change'];
 }

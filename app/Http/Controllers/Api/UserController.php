@@ -23,6 +23,7 @@ class UserController extends Controller
         $user->user_type = $request->user_type;
 
         $user->save();
+        return;
     }
 
     public function show(string $id)
@@ -48,5 +49,15 @@ class UserController extends Controller
     {
         $user = User::destroy($id);
         return $user;
+    }
+
+    public function login(Request $request)
+    {
+        $user = User::where('user_mail',$request->user_mail)
+                    ->where('user_pass',$request->user_pass)
+                    ->get();
+
+       return empty($user) ? "Unregistered user" : $user;
+        
     }
 }

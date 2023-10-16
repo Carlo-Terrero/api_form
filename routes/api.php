@@ -22,6 +22,7 @@ Route::controller(SurveyController::class)->group(function() {
 Route::controller(UserController::class)->group(function() {
     Route::get('/users', 'index');
     Route::post('/user', 'store');
+    Route::post('/user/login', 'login');
     Route::get('/user/{id}', 'show');
     Route::put('/user/{id}', 'update');
     Route::delete('/user/{id}', 'destroy');

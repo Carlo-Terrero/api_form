@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('dni');
             $table->string('product');
             $table->string('by_product');
+            $table->string('by_product_two');
             $table->string('maintenance');
+            $table->string('maintenance_two');
             $table->string('state');
             $table->date('create_survey');
             $table->date('last_change');
