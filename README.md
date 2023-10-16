@@ -31,3 +31,6 @@ son usuarios de prueba. -->
 #### Adjunto url para que puedas interactuar con el FrontEnd
 
 - https://github.com/Carlo-Terrero/front_from_app#adjunto-url-para-que-puedas-interactuar-con-el-backend
+
+## Herramientas utilizadas
+#### No he implementado ninguna herramienta, fuera de las que proporciona Laravel cuando inicias la construcción del proyecto.
